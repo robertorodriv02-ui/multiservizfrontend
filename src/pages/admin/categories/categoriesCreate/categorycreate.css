@@ -1,0 +1,46 @@
+.categorycreate-main {
+    height: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.categorycreate-form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.categorycreate-input {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid var(--SOFTWORDS);
+    border-radius: 5px;
+    background-color: #7e7e7e00;
+    color: var(--COLOR);
+    font-size: 16px;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.categorycreate-label {
+    margin-top: 20px;
+}
+
+.categorycreate-btn {
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0 50px;
+    margin-left: auto;
+    background-color: var(--PRIMARY);
+    color: #ffffff;
+}
+.categorycreate-btn:hover {
+    background-color: var(--HOVER);
+}

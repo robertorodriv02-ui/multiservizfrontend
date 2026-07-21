@@ -1,0 +1,100 @@
+.producto-card {
+    margin: 0px auto 40px auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+.producto-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.productoadmin-header {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto-text {
+    margin: 10px auto;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.producto-textshort {
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto-price, .producto-name {
+    font-weight: 600;
+}
+
+.producto-price {
+    color: var(--PRIMARY);
+}
+
+.producto-detail {
+    padding: 0 5px;
+    margin-top: 10px;
+}
+
+.producto-noid {
+    width: fit-content;
+    margin: 50px auto;
+    font-size: 20px;
+}
+
+.producto-link {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+    background-color: var(--PRIMARY);
+    padding: 5PX 8PX 7px 8px;
+    border-radius: 4px;
+}
+.producto-link:hover {
+    background-color: var(--HOVER);
+}
+
+.producto-categ {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--CATEG);
+  margin-bottom: 10px;
+}
+
+.producto-caradd {
+    background-color: var(--PRIMARY);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    gap: 10px;
+}
+.producto-caradd:hover {
+    background-color: var(--HOVER);
+}
+
+.productoadmin-btns {
+    display: flex;
+    gap: 5px;
+}
+
+#btn-options {
+    width: 50px;
+    height: 30px;
+}
+
+#productoadmin-options-btn {
+    gap: 15px;
+}

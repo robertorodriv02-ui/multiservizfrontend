@@ -1,0 +1,95 @@
+.carpage-component {
+    padding: 10px;
+}
+
+.carpage-img {
+    width: 80px;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    margin-right: 10px;
+}
+
+.carpage-product {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.082);
+    border-radius: 8px;
+    font-size: 14px;
+    
+}
+
+.carpage-imgtext {
+    display: flex;
+    align-items: center;
+}
+
+.carpage-btns {
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 0;
+}
+
+.carpage-btns p {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.carpage-btns button {
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    color: var(--COLOR);
+}
+
+.carpage-price, .carpage-total span  {
+    margin: 3px 0 5px 0;
+    color: var(--PRIMARY);
+    font-weight: 600;
+}
+
+.carpage-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 0;
+    gap: 5px;
+}
+
+.carpage-empty {
+    margin: 30px 20px;
+    text-align: center;
+}
+
+.carpage-empty p {
+    margin-bottom: 15px;
+}
+
+.carpage-pay {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.carpage-hr {
+    margin-top: 20px;
+}
+
+.carpage-pay h4 {
+    font-weight: 400;
+}
+
+.carpage-pedido {
+    margin: 15px;
+    background-color: var(--PRIMARY);
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px 7px 10px;
+    color: #ffffff;
+    font-size: 16px;
+}
+.carpage-pedido:hover {
+    background-color: var(--HOVER);
+}
+
+.carpage-h2 {
+    margin-bottom: 10px;
+}

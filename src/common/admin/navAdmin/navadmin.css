@@ -1,0 +1,22 @@
+.admin-nav-main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.admin-nav-a {
+    text-decoration: none;
+    color: var(--SOFTWORDS);
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.active {
+    border-bottom: 1px solid var(--PRIMARY);
+    color: var(--PRIMARY);
+}
+
+.admin-nav-hr {
+    margin-bottom: 15px;
+}

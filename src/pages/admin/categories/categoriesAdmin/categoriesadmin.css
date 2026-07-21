@@ -1,0 +1,74 @@
+.categoriesadmin-main {
+    padding: 10px 20px;
+}
+
+.categoriesadmin-categorysection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#categoriesadmin-a {
+    margin-left: auto;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#categoriesadmin-a:hover {
+    background-color: var(--HOVER);
+}
+
+#categoriesadmin-a div {
+    padding-bottom: 3px;
+}
+
+.categorycard-main {
+    background-color: var(--TENUE);
+    width: 100%;
+    text-align: center;
+    padding: 20px 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorycard-p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorycard-btnwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 -5px 0;
+    gap: 5px;
+    padding: 0 5px;
+}
+
+.categoriesadmin-delete {
+    padding: 3px 0 1px 0;
+    background-color: #ff00001e;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.categoriesadmin-edit {
+    padding: 3px 0 1px 0;
+    background-color: #0077ff1e;
+    color: blue;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}

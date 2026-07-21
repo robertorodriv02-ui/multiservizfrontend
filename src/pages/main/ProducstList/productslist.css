@@ -1,0 +1,87 @@
+.productsadmin-main {
+  padding: 10px 10px;
+}
+
+.productsadmin-a {
+  display: block;
+  width: fit-content;
+  background-color: var(--PRIMARY);
+  padding: 10px 15px 10px 15px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.productsadmin-card {
+  background-color: var(--TENUE);
+  padding: 10px 10px 8px 8px;
+  border-radius: 10px;
+}
+
+.productsadmin-categorysection {
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.productsadmin-category {
+  background-color: var(--TENUE);
+  padding: 3px 10px 5px 10px;
+  border-radius: 10px;
+  height: fit-content;
+  color: var(--COLOR);
+  text-decoration: none;
+}
+
+.isActive {
+  background-color: var(--PRIMARY);
+  color: #fff;
+}
+
+.productsadmin-searchandmore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.productsadmin-searcform {
+  flex: 1;
+}
+
+.productsadmin-noproductos {
+  text-align: center;
+}
+
+.productsadmin-h3-monedas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.productsadmin-monedas {
+  display: flex;
+}
+
+.productsadmin-moneda {
+  border: 1px solid var(--PRIMARY);
+  padding: 5px;
+  box-shadow: 0 1px 5px #0000004b;
+  transition: all 0.2s;
+}
+
+.productsadmin-usd {
+  border-radius: 10px 0 0 10px;
+}
+
+.productsadmin-cup {
+  border-radius: 0 10px 10px 0;
+}
+
+.productsadmin-active {
+  background-color: var(--PRIMARY);
+  color: white;
+}

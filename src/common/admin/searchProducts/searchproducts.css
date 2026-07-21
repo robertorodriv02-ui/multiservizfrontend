@@ -1,0 +1,25 @@
+.searchproducts-form {
+   width: 100%;
+   display: flex;
+}
+
+.searchproducts-form input {
+    flex: 1;
+    height: 35px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid var(--INPUT-BORDER);
+    outline: none;
+    padding: 0 10px;
+    background-color: var(--TENUE);
+    font-size: 16px;
+    color: inherit;
+}
+
+.searchproducts-form button {
+    border-radius: 0 10px 10px 0;
+    border: 1px solid var(--INPUT-BORDER);
+    border-left: none;
+    background-color: var(--PRIMARY);
+    color: white;
+    width: 40px;
+}

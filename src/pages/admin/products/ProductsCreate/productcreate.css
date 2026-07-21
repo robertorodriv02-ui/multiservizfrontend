@@ -1,0 +1,78 @@
+.productcreate-main {
+    padding: 10px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.productcreate-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.productcreate-input {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid var(--SOFTWORDS);
+    border-radius: 5px;
+    background-color: #00000000;
+    color: var(--COLOR);
+    font-size: 16px;
+}
+.productcreate-input:focus {
+    outline: none;
+}
+
+.productcreate-send {
+    height: 30px;
+    background-color: var(--PRIMARY);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    margin: 15px;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.productcreate-details {
+    height: 70px;
+}
+
+.productcreate-label {
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.productcreate-error {
+    font-size: 14px;
+    color: red;
+}
+
+.productcreate-imginput {
+    display: none;
+}
+
+.productcreate-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 5px;
+}
+
+.productcreate-img {
+    margin: 20px 0 0 0;
+    width: fit-content;
+    padding: 3px 10px;
+}
+
+.productcreate-select {
+    width: 100%;
+}
+
+.productcreate-option {
+    color: var(--COLOR);
+}

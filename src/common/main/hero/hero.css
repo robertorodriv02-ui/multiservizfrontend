@@ -1,0 +1,20 @@
+.hero-main {
+    /* background-color: #003cff15; */
+    background-color: var(--PRIMARY);
+    padding: 10px 10px;
+    text-align: center;
+    margin: 0 -10px;
+    margin-bottom: 10px;
+}
+
+.hero-h1 {
+    font-weight: 600;
+    color: white;
+}
+
+.hero-frase {
+    margin-top: 20px;
+    color: white;
+    padding: 0 10px;
+    font-style: italic;
+}

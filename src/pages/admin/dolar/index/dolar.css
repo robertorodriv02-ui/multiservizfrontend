@@ -1,0 +1,32 @@
+.dolar-main {
+  padding: 10px;
+}
+
+.dolar-show {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.3rem;
+  background-color: var(--TENUE);
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.dolar-cambio {
+  font-weight: bold;
+  color: var(--PRIMARY);
+}
+
+.dolar-btnwrapper {
+    display: flex;
+    justify-content: end;
+}
+
+#dolar-btn {
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.dolar-createbtn {
+  display: flex;
+  justify-content: center;
+}

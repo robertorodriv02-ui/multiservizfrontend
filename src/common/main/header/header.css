@@ -1,0 +1,61 @@
+.header-main {
+    position: sticky;
+    top: 0;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -10px;
+    background-color: var(--BG);
+}
+
+.header-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-main h2, .header-main h2 span {
+    font-weight: 600;
+}
+
+.header-main h2 span {
+    color: var(--PRIMARY);
+}
+
+.header-logo {
+    background-color: var(--PRIMARY);
+    border-radius: 50%;
+    padding: 4px 7px 0px 7px;
+}
+
+.header-btns {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-HomeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #006ae43a;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.header-HomeBtn p {
+    color: var(--PRIMARY);
+    font-weight: 600;
+}
+
+.header-carBtn {
+    background-color: var(--PRIMARY);
+    padding: 4px 5px 1px 5px;
+    border-radius: 8px;
+}
