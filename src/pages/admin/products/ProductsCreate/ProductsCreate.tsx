@@ -52,8 +52,9 @@ function ProductsCreate() {
         image: data.image.length, 
       }
       console.log(test)
-
+      console.log("preparados para enviar")
       await apiProducts.createProduct(formData);
+      console.log("enviado")
       //nav("/admin/products");
     } catch (e) {
       console.log(e);
