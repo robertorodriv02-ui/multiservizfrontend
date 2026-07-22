@@ -8,6 +8,7 @@
     justify-content: space-between;
     margin: 0 -10px;
     background-color: var(--BG);
+    z-index: 1000;
 }
 
 .header-title {

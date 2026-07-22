@@ -124,16 +124,19 @@ function ProductsList() {
           <p className="categ-spinner"></p>
         ) : (
           response &&
-          response.map((category) => (
-            <Link
-              className="productsadmin-category"
-              key={category.id}
-              to={`/category/${category.id}`}
-              onClick={() => getProductosPages}
-            >
-              {category.name}
-            </Link>
-          ))
+          response.map(
+            (category) =>
+              category.products === 0 && (
+                <Link
+                  className="productsadmin-category"
+                  key={category.id}
+                  to={`/category/${category.id}`}
+                  onClick={() => getProductosPages}
+                >
+                  {category.name}
+                </Link>
+              )
+          )
         )}
       </section>
       <section className="productsadmin-h3-monedas">
