@@ -1,7 +1,7 @@
 import { useApiGet } from "../../../../logic/admin/useApiGet";
 import { useForm } from "react-hook-form";
 import "./productcreate.css";
-import { apiProducts } from "../../../../api/api";
+//import { apiProducts } from "../../../../api/api";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { isAuth } from "../../../../auth/services/authService";
@@ -22,6 +22,7 @@ function ProductsCreate() {
   const nav = useNavigate();
   const file = watch("image");
   const preview = file?.[0] ? URL.createObjectURL(file[0]) : null;
+  const baseUrl = import.meta.env.VITE_BASE_URL;
 
 
   useEffect(() => {
@@ -44,18 +45,15 @@ function ProductsCreate() {
       formData.append("details", data.details || "");
       formData.append("image", data.image[0]);
 
-      const test = {
-        name: data.name,
-        price: data.price.toString(),
-        category_id: data.category_id.toString() || id.toString(),
-        details: data.details || "",
-        image: data.image.length, 
-      }
-      console.log(test)
-      console.log("preparados para enviar")
-      await apiProducts.createProduct(formData);
-      console.log("enviado")
-      //nav("/admin/products");
+      //await apiProducts.createProduct(formData);
+      const response = await fetch(`${baseUrl}/products`, {
+        method: "POST",
+        body: formData
+      })
+      console.log("Status: ", response.status)
+      const resp = await response.json()
+      console.log(resp)
+      nav("/admin/products");
     } catch (e) {
       console.log(e);
     }
