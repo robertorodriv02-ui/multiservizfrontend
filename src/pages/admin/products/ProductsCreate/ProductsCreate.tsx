@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import "./productcreate.css";
 import { apiProducts } from "../../../../api/api";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { isAuth } from "../../../../auth/services/authService";
 import type { Category } from "../../../../types/types";
 
@@ -18,10 +18,11 @@ interface FormData {
 function ProductsCreate() {
   const { response, loading } = useApiGet<Category[]>("categories");
   const { register, handleSubmit, watch } = useForm<FormData>();
-  //const [imagePrevew, setImagePrevew] = useState<string | null>(null)
+  const [sending, setSending] = useState<boolean>(false);
   const nav = useNavigate();
   const file = watch("image");
   const preview = file?.[0] ? URL.createObjectURL(file[0]) : null;
+
 
   useEffect(() => {
     isAuth().then((authenticated) => {
@@ -31,6 +32,7 @@ function ProductsCreate() {
 
   async function onSubmit(data: FormData) {
     const id = response?.[0].id as number;
+    setSending(true);
     try {
       const formData = new FormData();
       formData.append("name", data.name);
@@ -42,11 +44,21 @@ function ProductsCreate() {
       formData.append("details", data.details || "");
       formData.append("image", data.image[0]);
 
+      const test = {
+        name: data.name,
+        price: data.price.toString(),
+        category_id: data.category_id.toString() || id.toString(),
+        details: data.details || "",
+        image: data.image.length, 
+      }
+      console.log(test)
+
       await apiProducts.createProduct(formData);
-      nav("/admin/products");
+      //nav("/admin/products");
     } catch (e) {
       console.log(e);
     }
+    setSending(false);
   }
 
   return (
@@ -133,7 +145,13 @@ function ProductsCreate() {
           )}
         </section>
 
-        <button className="productcreate-send">Crear</button>
+        {!sending ? (
+          <button className="productcreate-send">Crear</button>
+        ) : (
+          <p id="productcreate-sending" className="productcreate-send">
+            Enviando...
+          </p>
+        )}
       </form>
     </main>
   );

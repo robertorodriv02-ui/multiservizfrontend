@@ -34,8 +34,17 @@
     border-radius: 8px;
     width: 150px;
     margin: 15px;
+    padding: 0 0 2px 0;
     font-size: 16px;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#productcreate-sending {
+    background-color: var(--TENUE);
+    border: 1px solid var(--PRIMARY);
 }
 
 .productcreate-details {
