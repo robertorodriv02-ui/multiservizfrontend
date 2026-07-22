@@ -128,7 +128,7 @@ function ProductsList() {
             <Link
               className="productsadmin-category"
               key={category.id}
-              to={`/admin/products/category/${category.id}`}
+              to={`/category/${category.id}`}
               onClick={() => getProductosPages}
             >
               {category.name}
