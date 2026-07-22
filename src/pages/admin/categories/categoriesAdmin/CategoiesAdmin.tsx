@@ -12,8 +12,8 @@ import EditSvg from "../../../../svg/EditSvg";
 
 function CategoiesAdmin() {
   const nav = useNavigate();
-  const { response } = useApiGet<Category[]>("categories");
-  const [categories, setCategories] = useState<Category[]>()
+  const { response, loading } = useApiGet<Category[]>("categories");
+  const [categories, setCategories] = useState<Category[]>();
 
   useEffect(() => {
     isAuth().then((authenticated) => {
@@ -22,8 +22,8 @@ function CategoiesAdmin() {
   }, [nav]);
 
   useEffect(() => {
-    setCategories(response)
-  }, [response])
+    setCategories(response);
+  }, [response]);
 
   async function deleCategory(id: number) {
     const comfirm = window.confirm(
@@ -57,25 +57,33 @@ function CategoiesAdmin() {
         <div>Nueva categoría</div>
         <MoreSvg />
       </Link>
-      <section className="categoriesadmin-categorysection">
-        {categories &&
-          categories.map((category) => (
-            <main className="categorycard-main" key={category.id}>
-              <p className="categorycard-p">{category.name}</p>
-              <section className="categorycard-btnwrapper">
-                <button
-                  onClick={() => deleCategory(category.id)}
-                  className="categoriesadmin-delete"
-                >
-                  <DeleteSvg />
-                </button>
-                <Link to={"#"} className="categoriesadmin-edit">
-                  <EditSvg />
-                </Link>
-              </section>
-            </main>
-          ))}
-      </section>
+
+      {loading ? (
+        <div className="loader-container">
+          <div className="spinner" />
+          <p className="ProductosPorCategoria-loading">Cargando...</p>
+        </div>
+      ) : (
+        <section className="categoriesadmin-categorysection">
+          {categories &&
+            categories.map((category) => (
+              <main className="categorycard-main" key={category.id}>
+                <p className="categorycard-p">{category.name}</p>
+                <section className="categorycard-btnwrapper">
+                  <button
+                    onClick={() => deleCategory(category.id)}
+                    className="categoriesadmin-delete"
+                  >
+                    <DeleteSvg />
+                  </button>
+                  <Link to={"#"} className="categoriesadmin-edit">
+                    <EditSvg />
+                  </Link>
+                </section>
+              </main>
+            ))}
+        </section>
+      )}
     </main>
   );
 }

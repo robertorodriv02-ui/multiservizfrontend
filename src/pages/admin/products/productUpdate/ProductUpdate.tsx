@@ -16,7 +16,7 @@ interface FormData {
 }
 
 function ProductUpdate() {
-  const {response} = useApiGet<Category[]>("categories");
+  const { response, loading } = useApiGet<Category[]>("categories");
   const { register, handleSubmit, watch, reset } = useForm<FormData>();
   const nav = useNavigate();
   const file = watch("image");
@@ -44,8 +44,8 @@ function ProductUpdate() {
         price: resp.data.price,
         details: resp.data.details,
         category_id: resp.data.category_id,
-        available: resp.data.available
-      })
+        available: resp.data.available,
+      });
     }
   }
 
@@ -114,11 +114,11 @@ function ProductUpdate() {
                 src={updateProduct.image}
                 alt={updateProduct?.name}
                 style={{
-                maxWidth: "200px",
-                width: "100%",
-                borderRadius: "10px",
-                marginTop: "5px",
-              }}
+                  maxWidth: "200px",
+                  width: "100%",
+                  borderRadius: "10px",
+                  marginTop: "5px",
+                }}
               />
             )
           )}
@@ -128,12 +128,12 @@ function ProductUpdate() {
           <label htmlFor="available" className="productcreate-label">
             Disponibilidad
           </label>
-            <input
-              type="checkbox"
-              className="productupdate-disponinput"
-              id="available"
-              {...register("available")}
-            />
+          <input
+            type="checkbox"
+            className="productupdate-disponinput"
+            id="available"
+            {...register("available")}
+          />
         </section>
 
         <label className="productcreate-label" htmlFor="name">
@@ -167,27 +167,35 @@ function ProductUpdate() {
 
         <section className="productcreate-section">
           <label className="productcreate-label">Categoría</label>
-          <select
-            className="productcreate-select productcreate-input"
-            id="category_id"
-            {...register("category_id")}
-          >
-            <option className="productcreate-option" key={0} value={updateProduct?.category_id}>
-              {updateProduct?.category.name}
-            </option>
-            {response?.map(
-              (categ) =>
-                categ.id !== updateProduct?.category_id && (
-                  <option
-                    className="productcreate-option"
-                    key={categ.id}
-                    value={categ.id}
-                  >
-                    {categ.name}
-                  </option>
-                )
-            )}
-          </select>
+          {loading ? (
+            <p>Cargando categorías...</p>
+          ) : (
+            <select
+              className="productcreate-select productcreate-input"
+              id="category_id"
+              {...register("category_id")}
+            >
+              <option
+                className="productcreate-option"
+                key={0}
+                value={updateProduct?.category_id}
+              >
+                {updateProduct?.category.name}
+              </option>
+              {response?.map(
+                (categ) =>
+                  categ.id !== updateProduct?.category_id && (
+                    <option
+                      className="productcreate-option"
+                      key={categ.id}
+                      value={categ.id}
+                    >
+                      {categ.name}
+                    </option>
+                  )
+              )}
+            </select>
+          )}
         </section>
 
         <button className="productcreate-send">Actualizar</button>

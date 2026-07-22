@@ -16,7 +16,7 @@ interface FormData {
 }
 
 function ProductsCreate() {
-  const {response} = useApiGet<Category[]>("categories");
+  const { response, loading } = useApiGet<Category[]>("categories");
   const { register, handleSubmit, watch } = useForm<FormData>();
   //const [imagePrevew, setImagePrevew] = useState<string | null>(null)
   const nav = useNavigate();
@@ -112,21 +112,25 @@ function ProductsCreate() {
 
         <section className="productcreate-section">
           <label className="productcreate-label">Categoría</label>
-          <select
-            className="productcreate-select productcreate-input"
-            id="category_id"
-            {...register("category_id")}
-          >
-            {response?.map((categ) => (
-              <option
-                className="productcreate-option"
-                key={categ.id}
-                value={categ.id}
-              >
-                {categ.name}
-              </option>
-            ))}
-          </select>
+          {loading ? (
+            <p>Cargando categorías...</p>
+          ) : (
+            <select
+              className="productcreate-select productcreate-input"
+              id="category_id"
+              {...register("category_id")}
+            >
+              {response?.map((categ) => (
+                <option
+                  className="productcreate-option"
+                  key={categ.id}
+                  value={categ.id}
+                >
+                  {categ.name}
+                </option>
+              ))}
+            </select>
+          )}
         </section>
 
         <button className="productcreate-send">Crear</button>

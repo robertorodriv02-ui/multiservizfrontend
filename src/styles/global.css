@@ -16,6 +16,15 @@
   animation: spin 1s linear infinite;
 }
 
+.categ-spinner {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #f3f3f3;
+  border-top: 4px solid var(--PRIMARY);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

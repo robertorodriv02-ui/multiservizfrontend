@@ -71,7 +71,7 @@ function ProductAdmin() {
   }
 
   return (
-    <main>
+    <main className="productadmin-main">
       {loading ? (
         <div className="loader-container">
           <div className="spinner" />
