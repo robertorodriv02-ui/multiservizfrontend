@@ -126,7 +126,7 @@ function ProductsList() {
           response &&
           response.map(
             (category) =>
-              category.products === 0 && (
+              category.products > 0 && (
                 <Link
                   className="productsadmin-category"
                   key={category.id}
