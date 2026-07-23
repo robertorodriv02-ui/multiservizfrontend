@@ -53,7 +53,7 @@ function ProductsCreate() {
       console.log("Status: ", response.status)
       const resp = await response.json()
       console.log(resp)
-      nav("/admin/products");
+      //nav("/admin/products");
     } catch (e) {
       console.log(e);
     }
