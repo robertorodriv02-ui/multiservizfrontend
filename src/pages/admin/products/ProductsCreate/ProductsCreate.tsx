@@ -48,7 +48,7 @@ function ProductsCreate() {
       console.log("Enviando...")
       console.log(`${baseUrl}/products`)
       //await apiProducts.createProduct(formData);
-      const response = await fetch(`${baseUrl}/products`, {
+      const response = await fetch("https://multiservizbackendproject1.onrender.com/products/", {
         method: "POST",
         body: formData
       })
