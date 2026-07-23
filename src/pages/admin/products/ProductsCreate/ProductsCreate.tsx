@@ -45,6 +45,7 @@ function ProductsCreate() {
       formData.append("details", data.details || "");
       formData.append("image", data.image[0]);
 
+      console.log("Enviando...")
       //await apiProducts.createProduct(formData);
       const response = await fetch(`${baseUrl}/products`, {
         method: "POST",
